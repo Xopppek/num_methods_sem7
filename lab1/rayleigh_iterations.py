@@ -10,7 +10,7 @@ def rayleigh_method_for_TM(a, b, c, lambd, v = None, epsilon = 0.00001, max_iter
     v - numpy массив float (начальное приближение собственного вектора),
     epsilon - точность,
     max_iterations - ограничение итераций
-    
+
     Возвращает найденное собственное значение и соответствующий ему вектор
     '''
     n= len(b)
@@ -26,16 +26,12 @@ def rayleigh_method_for_TM(a, b, c, lambd, v = None, epsilon = 0.00001, max_iter
 
     v /= LA.norm(v)
     v_new = TMA(a, b - lambd, c, v)
-    print("v_new0", v_new)
     mu = v_new.dot(v)
-    print("mu0", mu)
     lambd =  lambd + 1 / mu
     lambd_old = lambd
     err =  2 * epsilon
 
     while err > epsilon and iteration_counter < max_iterations:
-        print("iter", iteration_counter)
-        print(lambd, lambd_old)
         v = v_new / LA.norm(v_new)
         v_new = TMA(a, b - lambd, c, v)
         mu = v_new.dot(v)
