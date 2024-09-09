@@ -9,6 +9,7 @@ def TMA(a, b, c, f = None):
     n = len(b)
     if f is None:
         f = np.zeros(n)
+    a, b, c, f = map(np.copy, (a, b, c, f))
     # приводим к матрице с 0 на поддиагонали
     for i in range(1, n):
         m = a[i-1] / b[i-1]
