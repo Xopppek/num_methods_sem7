@@ -2,7 +2,7 @@ import numpy as np
 from numpy import linalg as LA
 from TMA import TMA
 
-def rayleigh_method_for_TM(a, b, c, lambd, v = None, epsilon = 0.00001, max_iterations = 20):
+def rayleigh_method_for_TM(a, b, c, lambd, v = None, epsilon = 1e-8, max_iterations = 50):
     '''
     Метод предполагает использование для случая оператора с трехдиагональной матрицей
     a, b, c - numpy массивы float n-1, n, n-1 (поддиагональ, главная диагональ, и наддиагональ),

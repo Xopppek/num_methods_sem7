@@ -1,6 +1,6 @@
 import numpy as np
 
-def bisection_method(f, a, b, epsilon = 0.00001):
+def bisection_method(f, a, b, epsilon = 1e-8):
     '''
     На вход подается функция func,
     a, b - границы поиска корня
