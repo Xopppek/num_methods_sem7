@@ -1,6 +1,6 @@
 import numpy as np
 from numpy import linalg as LA
-from TMA import TMA
+from .TMA import TMA
 
 def rayleigh_method_for_TM(a, b, c, lambd, v = None, epsilon = 1e-8, max_iterations = 50):
     '''

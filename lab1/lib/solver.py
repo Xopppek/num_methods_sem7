@@ -1,6 +1,6 @@
 import numpy as np
-from rayleigh_iterations import rayleigh_method_for_TM
-from bisection_method import bisection_method
+from .rayleigh_iterations import rayleigh_method_for_TM
+from .bisection_method import bisection_method
 
 def get_eigs(l, h, init_eigenvalues_appr):
     '''
